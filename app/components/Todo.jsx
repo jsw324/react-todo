@@ -6,6 +6,7 @@
 
     render: function () {
       var {id, text, completed, createdAt, completedAt} = this.props;
+      var todoClassName = completed ? 'todo todo-completed' : 'todo';
       var renderDate = () => {
           var message = 'Created: ';
           var timestamp = createdAt;
@@ -19,13 +20,17 @@
       };
 
       return (
-        <div onClick={() => {
+        <div className={todoClassName} onClick={() => {
           this.props.onToggle(id);
         }}>
+        <div>
           <input type="checkbox" checked={completed}/>
-          <p>{text}</p>
-          <p>{renderDate()}</p>
         </div>
+        <div>
+          <p>{text}</p>
+          <p className="todo__subtext">{renderDate()}</p>
+        </div>
+      </div>
       )
     }
   });
