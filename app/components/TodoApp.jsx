@@ -53,7 +53,7 @@ var TodoApp = React.createClass({
     var filteredTodos = TodoAPI.filterTodos(todos, showCompleted, searchText);
     return (
       <div>
-        <h1 className="page-title">Todo Appp</h1>
+        <h1 className="page-title">Todo AZAXAZpp</h1>
 
         <div className="row">
           <div className="column small-centered small-11 medium-6 large-6">
