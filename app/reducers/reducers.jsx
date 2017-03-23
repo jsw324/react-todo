@@ -15,8 +15,8 @@
       case 'TOGGLE_SHOW_COMPLETED':
         return !state;
       default:
-        state;
-    };
+        return state;
+    }
   };
 
   export var todosReducer = (state = [], action) => {
