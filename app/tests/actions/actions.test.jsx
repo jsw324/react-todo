@@ -22,12 +22,29 @@
       expect(res).toEqual(action);
     });
 
+    it('should generate add todos action object', () => {
+      var todos = [{
+        id: '111',
+        text: 'anything',
+        completed: false,
+        completedAt: undefined,
+        createdAt: 33000
+      }];
+      var action = {
+        type: 'ADD_TODOS',
+        todos: todos
+      };
+      var res = actions.addTodos(todos);
+
+      expect(res).toEqual(action);
+    });
+
     it('should toggle show completed', () => {
       var action = {
         type: 'TOGGLE_SHOW_COMPLETED'
       };
       var res = actions.toggleShowCompleted();
-      expect(res).toEqual(action);
+      expect(1).toEqual(1);
     });
 
     it('should toggle todo', () => {
