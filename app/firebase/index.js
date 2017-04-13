@@ -2,12 +2,13 @@
 
   try {
     var config = {
-      apiKey: "AIzaSyAeUBOZ8TWtOYDtl7XiJVdk2pZj0ltNdwM",
-      authDomain: "react-todo-app-a0636.firebaseapp.com",
-      databaseURL: "https://react-todo-app-a0636.firebaseio.com",
-      storageBucket: "react-todo-app-a0636.appspot.com",
-      messagingSenderId: "368799527983"
+      apiKey: process.env.API_KEY,
+      authDomain: process.env.AUTH_DOMAIN,
+      databaseURL: process.env.DATABASE_URL,
+      storageBucket: process.env.STORAGE_BUCKET
     };
+    console.log('config', config);
+    console.log('env', process.env);
     firebase.initializeApp(config);
   } catch (e) {
 
