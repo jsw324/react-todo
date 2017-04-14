@@ -7,7 +7,7 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 try {
   envFile(path.join(__dirname, 'config/' + process.env.NODE_ENV + '.env'));
 } catch (e) {
-
+  console.log('error in webpack', e);
 }
 
 module.exports = {
@@ -30,13 +30,13 @@ module.exports = {
       }
     }),
     new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-        API_KEY: JSON.stringify(process.env.API_KEY),
-        AUTH_DOMAIN: JSON.stringify(process.env.AUTH_DOMAIN),
-        DATABASE_URL: JSON.stringify(process.env.DATABASE_URL),
-        STORAGE_BUCKET: JSON.stringify(process.env.STORAGE_BUCKET)
-      }
+
+        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+        'process.env.API_KEY': JSON.stringify(process.env.API_KEY),
+        'process.env.AUTH_DOMAIN': JSON.stringify(process.env.AUTH_DOMAIN),
+        'process.env.DATABASE_URL': JSON.stringify(process.env.DATABASE_URL),
+        'process.env.STORAGE_BUCKET': JSON.stringify(process.env.STORAGE_BUCKET)
+
     })
   ],
   output: {
