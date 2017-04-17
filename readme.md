@@ -1,9 +1,3 @@
-Boilerplate React App
+React Todo App  
 
-Comes prepackaged with Foundation, Webpack and a Nav bar.  Works out of the box.
-
-TO INSTALL:
-
-1. Clone the repo
-2. Run 'npm install'
-3. Build something awesome.
+This is a learning project built with React and Firebase.  Please visit the URL at  https://infinite-fjord-77058.herokuapp.com/
